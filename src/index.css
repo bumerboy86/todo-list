@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #212121;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  padding-bottom: 20px;
+}
+
+@media (width <= 290px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
