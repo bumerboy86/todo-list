@@ -1,23 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { INote } from "../../interfaces/INote";
+import { INote } from "../../interfaces/INote.ts";
 
 interface IUSerState {
-    notes: INote | null
+  notes: INote | null;
 }
 
 const initialState: IUSerState = {
-    notes: null,
-}
+  notes: null,
+};
 
 const userSlice = createSlice({
-    name: "notes",
-    initialState,
-    reducers: {
-    },
-    extraReducers: {
-
-    }
+  name: "notes",
+  initialState,
+  reducers: {},
+  extraReducers: {},
 });
 
 export default userSlice.reducer;
