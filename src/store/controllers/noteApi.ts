@@ -1,4 +1,5 @@
 import { INote } from "../../interfaces/INote.ts";
+import { INoteParams } from "../../interfaces/INoteParams.ts";
 import { INotePre } from "../../interfaces/INotePre.ts";
 import { IRespAddNote } from "../../interfaces/respAddNote.ts";
 import { api } from "../api.ts";
@@ -27,17 +28,17 @@ export const noteApi = api.injectEndpoints({
       invalidatesTags: ["Notes"],
     }),
 
-    // editNote: builder.mutation<ITodo, ITodo>({
-    //   query: (data: ITodo) => {
-    //     const { id, ...body } = data;
-    //     return {
-    //       url: `/notes/${id}.json`,
-    //       method: "PUT",
-    //       body,
-    //     };
-    //   },
-    //   invalidatesTags: ["Notes"],
-    // }),
+    editNote: builder.mutation<INote, INoteParams>({
+      query: (data: INoteParams) => {
+        const { id, ...body } = data;
+        return {
+          url: `/notes/${id}.json`,
+          method: "PUT",
+          body,
+        };
+      },
+      invalidatesTags: ["Notes"],
+    }),
   }),
 });
 
@@ -45,5 +46,5 @@ export const {
   useGetNotesQuery,
   useDeleteNoteMutation,
   useAddNoteMutation,
-  // useEditNoteMutation,
+  useEditNoteMutation,
 } = noteApi;

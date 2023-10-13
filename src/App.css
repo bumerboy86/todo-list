@@ -94,10 +94,6 @@
   background: rgba(233, 210, 184, 0.5);
 }
 
-.add_btn:disabled {
-  background: rgb(246 76 76 / 60%);
-}
-
 .delete_btn {
   position: absolute;
   width: 20px;
