@@ -114,13 +114,13 @@ function App() {
 
   return (
     <div className='todo_body'>
-      <h1>Список задач</h1>
+      <h1>Список дел</h1>
       <section className='todo_input_section'>
         <input
           value={message}
           className='toto_text_input'
           type='text'
-          placeholder='Введите заметку'
+          placeholder='Напишите задачу'
           onChange={(e) => setMessage(e.target.value)}
         />
 
